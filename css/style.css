@@ -14,11 +14,12 @@ img{
 
 .wrapper{
     max-width: 608px;
-    margin: 0 auto;
+    margin: 0 auto;  padding: 20px;
 }
 
 h1{
     font-size: 2.027rem;
+    font-weight: normal;
 }
 
 h2{
@@ -52,22 +53,48 @@ header img{
     max-width: 50%;
 }
 
-#top {
+#top .wrapper{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+
 }
 
-#top #limited :nth-child(1){
+#limited :nth-child(1){
     filter: grayscale(70);
-    grid-column: 1 / 4;
+    grid-column: 2 / 3;
+    
 }
+
+#intro{
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
+}
+
+#intro{
+    font-size: 1.1rem;
+}
+
+#intro :nth-child(2){
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+#intro a{
+    background-color: black;
+    padding: .5em 1em;
+    border-radius: .4em;
+    text-decoration: none;
+    color: white;
+    margin; 2em;
+}
+
 
 #saying {
     background-color: black;
     color: white;
     padding: 3em;
-    quotes: ;
+
 }
 
 #saying h2{
@@ -77,3 +104,10 @@ header img{
 #saying div div{
     margin-top: 100px;
 }
+
+#try div div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
