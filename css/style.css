@@ -6,14 +6,16 @@ body{background-color: white;
     font-family: "Poppins", sans-serif;
     line-height: 1.4rem; 
     margin: 0 auto;
+    
 }
 
 img{
     width: 100%;
+    border-radius: .3em;
 }
 
 .wrapper{
-    max-width: 608px;
+    max-width: 1200px;
     margin: 0 auto;  padding: 20px;
 }
 
@@ -50,34 +52,41 @@ header a{
 }
 
 header img{
-    max-width: 50%;
+    max-width: 40%;
 }
 
 #top .wrapper{
     display: grid;
+}
+
+#limited{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-
+    gap: 1em;
 }
+ #limited :nth-child(1){
+    grid-row: 1 / 4;
+    grid-column: 1 / 4;
+ }
 
-#limited :nth-child(1){
-    filter: grayscale(70);
-    grid-column: 2 / 3;
-    
-}
 
-#intro{
-    grid-row: 3 / 4;
-    grid-column: 1 / -1;
-}
 
 #intro{
     font-size: 1.1rem;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    grid-row: 2/ 3;
 }
 
 #intro :nth-child(2){
     font-weight: bold;
     font-size: 1.25rem;
+    margin: 0;
+}
+
+#intro :nth-child(3){
+    margin: 0px;
 }
 
 #intro a{
@@ -86,15 +95,23 @@ header img{
     border-radius: .4em;
     text-decoration: none;
     color: white;
-    margin; 2em;
+    margin-top: 2em;
 }
 
+#behind div div{
+    display: grid;
+}
+
+#behind h2{
+    text-align: center;
+    margin-bottom: 2em;
+}
 
 #saying {
     background-color: black;
     color: white;
     padding: 3em;
-
+    
 }
 
 #saying h2{
@@ -105,9 +122,84 @@ header img{
     margin-top: 100px;
 }
 
-#try div div{
+#try h2{
+    text-align: center;
+    font-size: 2em;
+    margin: 2em;
+}
+
+#try .products{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    gap: 2em;
 }
 
+#ride, #cookie, #brownie, #smore{
+    display: flex;
+    flex-direction: column;
+    background-color: #f8fafc;
+    border-radius: 1em;
+}
+
+#ride p, #brownie p, #cookie p, #smore p{
+    padding: 1em;
+    padding-bottom: .5em;
+    text-align: center;
+    font-size: 1.3em;
+    margin-top: 0;
+}
+
+#ride h3, #cookie h3, #brownie h3, #smore h3{
+    padding: 1em;
+    font-size: 1.7em;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#ride img, #cookie img, #brownie img, #smore img{
+    border-radius: 1em 1em 0 0;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    font-size: 1.4em;
+    text-align: center;
+    padding: 1em;
+}
+
+@media (min-width: 768px){
+    #limited{
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+    }
+    #limited :nth-child(1){
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    #limited :nth-child(2){
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    #limited :nth-child(3){
+        grid-column: 1/ 2;
+        grid-row: 2 / 3;
+    }
+
+    #limited :nth-child(4){
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+    
+    #behind{
+        col
+    }
+
+  }
+
+  @media (min-width: 960px){
+
+    }
