@@ -98,13 +98,17 @@ header img{
     margin-top: 2em;
 }
 
+#behind{
+    background-color: #f8fafc;
+}
+
 #behind div div{
     display: grid;
 }
 
 #behind h2{
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: em;
 }
 
 #saying {
@@ -118,8 +122,9 @@ header img{
     text-align: center;
 }
 
-#saying div div{
+#saying #quote{
     margin-top: 100px;
+    display: grid;
 }
 
 #try h2{
@@ -133,6 +138,7 @@ header img{
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 2em;
+    margin-bottom: 2em;
 }
 
 #ride, #cookie, #brownie, #smore{
@@ -170,6 +176,11 @@ footer{
 }
 
 @media (min-width: 768px){
+
+    header img{
+        max-width: 25%;
+    }
+
     #limited{
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(1, 1fr);
@@ -194,12 +205,35 @@ footer{
         grid-row: 2 / 3;
     }
     
-    #behind{
-        col
+    #behind div div{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5em;
+    }
+
+    #quote{
+        margin-top: 0;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #try .products{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
     }
 
   }
 
   @media (min-width: 960px){
+
+    #top .wrapper{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        gap: 2em;
+    }
+
+    #intro{
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        margin: 0;
+    }
 
     }
